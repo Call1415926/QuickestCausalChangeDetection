@@ -119,7 +119,7 @@ doValue = CalDoValue(A,mu,Sigma,delta,ChangeRange);
 
 %% Calculate monitoring statistics, ARL, EDD for four methods.
 
-ARL_set = [100,200,400,800,1000,2000,4000,6000,8000,10000]; %%% ARL set.
+ARL_set = [100,200,400,800,1000,2000,4000,6000,8000,10000]; %%% ARL set. w  must be smaller than min_ARL, or the ARL need to be reset
 epsilon_set = [5,5,5,5,10,10,10,20,20,50];
 EDD_set_4methods = zeros(4,length(ARL_set));
 for methods = 1:6
