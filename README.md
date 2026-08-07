@@ -4,7 +4,7 @@ MATLAB implementation for the paper **"Quickest Causal Change Point Detection by
 
 This repository implements sequential change-point detection in linear Gaussian causal graphs. Its main focus is the use of adaptive interventions to amplify an edge-weight change and reduce the expected detection delay (EDD) under a prescribed average run length (ARL) to false alarm.
 
-The code includes the proposed MAX-AI and MULTI-AI procedures, their randomized-intervention and no-intervention variants, two oracle-intervention references, the GGM and JS-WL-CuSum baselines, synthetic experiments, and the two semi-synthetic case studies described in the paper. All detector files called by `main.m`, including `getW_GGM.m`, are included in the repository.
+The code includes the proposed MAX-AI and MULTI-AI procedures, their randomized-intervention and no-intervention variants, two oracle-intervention references, the GGM and JS-WL-CuSum baselines, synthetic experiments, and the two semi-synthetic case studies described in the paper. All detector files called by `main.m`.
 
 ## Contents
 
