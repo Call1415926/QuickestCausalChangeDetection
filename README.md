@@ -326,12 +326,10 @@ The detector functions append replication indices to `tt.txt`. This file is only
 
 ## Reproducibility notes
 
-- Random DAG generation, change-location selection, exploration schedules, and simulated observations are stochastic. The current script does not set a random seed.
+
 - To make a run reproducible, set the random-number stream before graph generation and configure parallel random streams appropriately for `parfor`.
 - Keep exactly one experiment block active. Otherwise, variables from a later block may overwrite an earlier configuration.
 - The adjacency matrix must follow the topological node order expected by `CalDoValue.m` and the ancestor calculations in `getW.m`.
 - The main theoretical guarantees apply to a single edge-weight change. The multiple-change blocks are empirical robustness experiments.
-- Pre-change parameters are treated as known by the core implementation, consistent with the principal model in the paper.
-- Covariance estimates used by MULTI-type methods must be positive definite. When a window-specific estimate is not positive definite, the corresponding likelihood-ratio increment is set to zero.
 - Large experiments can take substantial time and memory. Begin with a small smoke test, then restore the paper-scale settings.
 
